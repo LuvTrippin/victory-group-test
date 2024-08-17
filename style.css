@@ -60,6 +60,7 @@
     border-radius: 350px;
     width: fit-content;
     cursor: pointer;
+    text-decoration: none;
 }
 .btn-secondary:hover {
     background-color: var(--primary-color);
@@ -497,6 +498,58 @@ header {
     top: 42%;
 }
 
+.block-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 0;
+}
+
+.block-2 .block-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.block-2 .block-header {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.block-2 .block-header .btn-secondary, .block-2 .block-header .block-title {
+    margin-left: -90px;
+}
+
+.block-2 .block-header .block-title, .block-2 .block-header .block-header-text {
+    max-width: 458px;
+}
+
+.block-2 .btn-primary {
+    padding: 23px 41px;
+    font-size: 16px;
+    line-height: 21px;
+    z-index: 1;
+}
+
+.block-2 .block-content-left {
+    margin-right: -130px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 34px;
+}
+
+.block-2 .doctor-name {
+    margin-bottom: 20px;
+    font-size: 55px;
+    line-height: 58px;
+}
+
+.block-2 .doctor-position {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
 @media screen and (max-width: 1680px) {
     body {
         width: 1280px;   
@@ -552,6 +605,11 @@ header {
     .slogan {
         bottom: 8%;
         left: 40%;
+    }
+    .block-2 .btn-primary {
+        padding: 10px 23px;
+        font-size: 14px;
+        line-height: 19px;
     }
 }
 
@@ -660,6 +718,7 @@ header {
         grid-template-rows: 87px 70px 225px 65px 152px;
         gap: 0;
         background-image: unset;
+        overflow: hidden;
     }
     .promo-with-image {
         margin: 28px 0 0;
@@ -769,6 +828,46 @@ header {
         top: unset;
         left: 85px;
         bottom: -76px;
+    }
+    .block-2 {
+        display: block;
+        padding-top: 65px;
+    }
+    .block-2 .block-content {
+        position: relative;
+    }
+    .block-2 .block-header .btn-secondary, .block-2 .block-header .block-title {
+        margin-left: 0;
+    }
+    .block-2 .doctor-name {
+        font-size: 30px;
+        line-height: 31px;
+        margin-bottom: 10px;
+    }
+    .block-2 .doctor-position {
+        font-size: 10px;
+        line-height: 14px;
+    }
+    .block-2 .btn-primary {
+        padding: 23px 41px;
+        font-size: 16px;
+        line-height: 21px;
+        position: absolute;
+        width: 100%;
+        bottom: -50px;
+    }
+    .block-2 .block-content-right img {
+        width: 252px;
+        height: 239px;
+    }
+    .block-2 .block-header .block-header-text {
+        max-width: 264px;
+    }
+    .block-2 .block-header .block-header-text.part-1 {
+        font-weight: 400;
+    }
+    .block-2 .block-header .block-header-text.part-2 {
+        display: none;
     }
 }
 
