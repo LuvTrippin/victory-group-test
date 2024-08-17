@@ -18,6 +18,9 @@
 .text-600 {
     font-weight: 600;
 }
+.text-500 {
+    font-weight: 500;
+}
 .dimmed-text {
     color: var(--dimmed-color);
 }
@@ -50,6 +53,18 @@
 .btn-primary:hover {
     background-color: #d40f3d;
 }
+.btn-secondary {
+    box-shadow: 0px 15.26px 58.85px 0px #00000014;
+    background-color: #fff;
+    padding: 12px 29px;
+    border-radius: 350px;
+    width: fit-content;
+    cursor: pointer;
+}
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
 .huge-text {
     font-size: 165px;
     line-height: 70px;
@@ -69,6 +84,22 @@
     width: 1131px;
     height: 1131px;
     bottom: -216px;
+}
+
+.block {
+    padding: 50px 0;
+}
+
+.block-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.block-title {
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
 }
 
 * {
@@ -156,7 +187,7 @@ header {
     background-color: var(--primary-color);
     width: 31px;
     height: 31px;
-    background-image: url('assets/img/header-phone-ico.png');
+    background-image: url('assets/img/header-phone-ico.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -227,8 +258,12 @@ header {
    align-items: center;
 }
 .promo-service .nav-btn {
-    position: absolute;
+    right: -27px;
 }
+.promo-service .nav-btn:hover {
+    background-color: #fcfafa;
+}
+
 .promo-service .service-title {
     font-size: 18px;
     line-height: 25px;
@@ -238,13 +273,13 @@ header {
     margin: 5px 0 10px;
 }
  
-.promo-service .read-more {
+.promo-service .read-more, .btn-link {
     text-decoration: underline dotted #3F3F3F 1px;
     text-underline-offset: 6px;
     color: #3F3F3F;
 }
 
-.promo-service .read-more:hover {
+.promo-service .read-more:hover, .btn-link:hover {
     text-decoration: none;
 }
     
@@ -316,7 +351,7 @@ header {
 .name-tag {
     position: absolute;
     bottom: 20%;
-    z-index: 1;
+    z-index: 2;
     font-size: 16px;
     line-height: 22px;
     padding: 10px 18px 14px;
@@ -325,6 +360,42 @@ header {
     background-color: #fff;
     display: flex;
     gap: 11px;
+}
+
+.slogan {
+    position: absolute;
+    bottom: 4%;
+    z-index: 1;
+    max-width: 228px;
+    text-align: left;
+    left: 41%;
+}
+
+.slogan .part-1, .slogan .part-2 {
+    font-size: 18px;
+    line-height: 28px;
+    padding: 7px 10px 7px 23px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.slogan .part-1 {
+    padding-right: 18px;
+}
+
+.slogan .part-2 {
+    box-shadow: 0px 19px 24px 0px #00000026;
+}
+
+.slogan .dimmed-text {
+    padding: 4px 15px 13px 24px;
+    box-shadow: 0px 37px 24px 0px #00000026;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 178px;
+    font-size: 11px;
+    line-height: 15px;
+    display: inline-block;
 }
 
 .person-ico {
@@ -339,6 +410,93 @@ header {
     background-position: center;
 }
 
+.block-1 .block-title {
+    max-width: 920px;
+    margin-bottom: 50px;
+}
+
+.block-1 .block-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    position: relative;
+}
+
+.service-teaser {
+    box-shadow: 0px 14px 66px 0px #0000001A;
+    border-radius: 10px;
+}
+
+.service-teaser .service-body {
+    padding: 34px 31px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-teaser .service-btns {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+}
+
+.service-btns .btn-primary {
+    padding: 10px 33px;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.service-teaser .service-title {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.service-teaser .service-img {
+    box-shadow: 15px 0px 66px 0px #00000014;
+    background: linear-gradient(0deg, #E21F4D, #E21F4D), radial-gradient(81.66% 73% at 50% 50%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    max-height: 200px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.service-teaser .service-img img {
+    background-image: url('assets/img/pattern.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nav-btn {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    box-shadow: 0px 15.26px 58.85px 0px #00000014;
+    border-radius: 100%;
+    background-color: #fff;
+    background-image: url('assets/img/angle-right.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    cursor: pointer;
+}
+.nav-btn:hover {
+    background-color: #fcfafa;
+}
+
+.nav-btn.btn-prev {
+    transform: rotate(180deg);
+}
+
+.block-1 .nav-btn.btn-prev {
+    left: -27px;
+    top: 42%;
+}
+
+.block-1 .nav-btn.btn-next {
+    left: 76%;
+    top: 42%;
+}
+
 @media screen and (max-width: 1680px) {
     body {
         width: 1280px;   
@@ -349,6 +507,10 @@ header {
     .block-promo .Babayan-photo {
         width: 500px;
         height: 750px;
+    }
+    .block-1 .nav-btn.btn-next {
+        left: 89%;
+        top: 42%;
     }
 }
 
@@ -383,6 +545,13 @@ header {
     }
     .rating {
         left: 39%;
+    }
+    .name-tag {
+        bottom: 24%;
+    }
+    .slogan {
+        bottom: 8%;
+        left: 40%;
     }
 }
 
@@ -443,6 +612,17 @@ header {
         width: 30px;
         height: 19px;
         cursor: pointer;
+    }
+    .header-contacts {
+        width: 30px;
+        height: 30px;
+    }
+    .phone-ico {
+        width: 11px;
+        height: 11px;
+        background-color: transparent;
+        background-image: url('assets/img/phone-ico-mobile.svg');
+        background-size: contain;
     }
     .promo-text {
         font-size: 12px;
@@ -529,14 +709,66 @@ header {
         width: 27px;
         height: 27px;
     }
+    .name-tag {
+        padding: 6px 11px 7px;
+        font-size: 12px;
+        line-height: 16px;
+        bottom: 13%;
+    }
+    .person-ico {
+        width: 17px;
+        height: 17px;
+    }
+    .slogan {
+        display: none;
+    }
+    .block-title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .block-1 .block-title {
+        margin-bottom: 20px;
+    }
+    .block-header {
+        gap: 10px;
+    }
+    .block-1 .block-content {
+        grid-template-columns: repeat(4, 180px);
+    }
+    .service-teaser .service-img {
+        max-height: 96px;
+    }
+    .service-teaser .service-img img {
+        width: 180px;
+        height: 124px;
+    }
+    .service-teaser .service-title {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .service-teaser .service-body {
+        padding: 10px 13px;
+        gap: 10px;
+    }
+    .service-teaser .service-btns {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .service-btns .btn-primary {
+        padding: 8px 46px;
+        font-size: 10px;
+        line-height: 13px;
+        width: 100%;
+    }
+    .block-1 .nav-btn.btn-prev {
+        top: unset;
+        left: 0;
+        bottom: -76px;
+    }
+    .block-1 .nav-btn.btn-next {
+        top: unset;
+        left: 85px;
+        bottom: -76px;
+    }
 }
 
-/* @media screen and (max-width: 780px) {
-    body {
-        width: auto;   
-        margin: 0 30px;
-    };
-    header {
-        padding: 19px 0;
-    }
-} */
