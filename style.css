@@ -157,6 +157,8 @@ header {
     display: flex;
     padding: 15px calc((1500px - 1160px) / 2);
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .header-logo {
@@ -766,6 +768,174 @@ header {
     background-image: url('assets/img/advg4.svg');
 }
 
+.block-5 {
+    position: relative;
+    z-index: 1;
+}
+
+.block-5 .block-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 38px 0;
+    margin-top: -127px;
+}
+
+.block-5 .videos .video {
+    display: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.run-btn {
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    background-image: url('assets/img/run-btn.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.block-5 .videos .video:nth-child(1) {
+    display: block;
+}
+
+.block-5 .block-header {
+    margin-bottom: 50px;
+}
+
+.block-5 .header-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.block-5 .btn-link {
+    text-decoration: none;
+}
+
+.block-5 .btn-link:hover {
+    color: var(--primary-color);
+}
+
+.block-5 .videos-with-reviews {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 150px;
+}
+
+.block-5 .reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.review-teaser {
+    width: 211px;
+    padding: 5px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 15.26px 58.85px 0px #00000014;
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    gap: 15px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.review-teaser:hover {
+    background-color: #F5F5F599; 
+}
+
+.review-teaser .review-ico-wrapper {
+    width: 62px;
+    height: 62px;
+    background-color: #fff;
+    box-shadow: 0px 14px 54px 0px #00000014;
+    padding: 6px;
+    border-radius: 100%;
+}
+
+.review-teaser .review-ico {
+    width: 50px;
+    height: 50px;
+    background-image: url('assets/img/review-preview.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.reviews .nav-btn {
+    position: unset;
+    width: 43px;
+    height: 43px;
+}
+
+.nav-btn.btn-up {
+    transform: rotate(-90deg);
+}
+
+.nav-btn.btn-down {
+    transform: rotate(90deg);
+}
+
+.active-teaser {
+    border: 1px solid var(--primary-color);
+}
+
+.block-5 .feedback-links {
+    grid-column: 2;
+    margin-left: -600px;
+}
+
+.active-link {
+    color: var(--primary-color);
+}
+
+.block-5 .feedback-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.block-5 .feedback-links .links {
+    display: flex;
+    gap: 20px;
+}
+
+.block-5 .feedback-links .links .link {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 13px 24px 0px #0000001A;
+    border-radius: 100%;
+    background-color: #fff;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.block-5 .feedback-links .links .link:hover {
+    background-color: #F5F5F599;
+}
+
+
+.block-5 .feedback-links .links .link.link1 {
+    background-image: url('assets/img/cn1.svg');
+}
+.block-5 .feedback-links .links .link.link2 {
+    background-image: url('assets/img/cn2.svg');
+}
+.block-5 .feedback-links .links .link.link3 {
+    background-image: url('assets/img/cn3.svg');
+}
+.block-5 .feedback-links .links .link.link4 {
+    background-image: url('assets/img/cn4.svg');
+}
+
 @media screen and (max-width: 1680px) {
     body {
         width: 1280px;   
@@ -786,6 +956,16 @@ header {
     }
     .block-3 .doctor-teaser .doctor-name {
         font-size: 15px;
+    }
+
+    .block-5 img {
+        max-width: 725px;
+    }
+    .block-5 .videos-with-reviews {
+        gap: 40px;
+    }
+    .block-5 .feedback-links {
+        margin-left: -470px;
     }
 }
 
@@ -880,6 +1060,30 @@ header {
     }
     .block-4 .block-content {
         max-height: 565px;
+    }
+    .block-5 img {
+        max-width: 600px;
+    }
+    .block-5 .reviews {
+        display: none;
+    }
+    .block-5 .feedback-links {
+        margin-left: -100px;
+    }
+    .block-5 .feedback-links .links {
+        gap: 10px;
+    }
+    .block-5 .feedback-links .header {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .block-5 .videos-with-reviews {
+        grid-template-columns: 1fr;
+        gap: unset;
+    }
+    .block-5 .feedback-links .links .link {
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -1211,6 +1415,72 @@ header {
         top: -13px;
         left: 45%;
         background-size: contain;
+    }
+    .block-5 .block-content {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+    }
+    .block-5 .feedback-links {
+        grid-column: unset;
+    }
+    .block-5 .videos-with-reviews {
+        grid-column: unset;
+    }
+    .block-5 .feedback-links {
+        margin-left: 0;
+        grid-row: 2;
+        align-items: center;
+    }
+    .block-5 img {
+        max-width: 100%;
+    }
+    .block-5 .feedback-links .links .link {
+        width: 58px;
+        height: 58px;
+    }
+    .block-5 .feedback-links .links {
+        gap: 23px;
+    }
+    .run-btn {
+        width: 110px;
+        height: 110px;
+        top: 25%;
+        left: 32%;
+    }
+    .block-5 .block-header {
+        margin-bottom: 20px;
+    }
+    .block-5 .btn-link {
+        padding: 7px 15px;
+        font-size: 7px;
+        line-height: 9px;
+        box-shadow: 0px 5.75px 22.19px 0px #00000014;
+        border: 0.86px solid #0000001A;
+        border-radius: 132px;
+        background-color: transparent;
+    }
+    .block-5 .btn-link:hover {
+        border-color: var(--primary-color);
+    }
+    .block-5 .btn-link:first-child {
+        display: none;
+    }
+    .block-5 .header-btns {
+        gap: 10px;
+    }
+    .block-5 .active-link {
+        border: none;
+    }
+    .block-5 .active-link:hover {
+        border: 1px solid var(--primary-color);
+    }
+    .block-5 .videos .video {
+        display: block;
+    }
+    .videos {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
