@@ -609,6 +609,17 @@ header {
     left: -13px;
 }
 
+.red-plus {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-image: url('assets/img/plus.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -8px;
+    left: -15px;
+}
+
 .block-2 .signature {
     bottom: 5%;
     right: 20%;
@@ -936,6 +947,75 @@ header {
     background-image: url('assets/img/cn4.svg');
 }
 
+.block-6 {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px 90px;
+}
+
+.block-6 .block-header, .block-6 .block-footer {
+    grid-column: 2;
+    z-index: 1;
+}
+
+.block-6 .block-title, .block-6 .btn-secondary {
+    margin-left: -100px;
+}
+
+.block-6 .block-content {
+    grid-column: 1;
+    position: relative;
+    min-height: 400px;
+    margin-left: 130px;
+    grid-row: 1/3;
+}
+
+.block-6 .certificate-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 600px;
+    background-size: auto;
+    background-size: contain;
+    background-position: center;
+    background-position-y: center;
+    background-position-y: 309px;
+}
+
+.block-6 .block-title {
+    max-width: 363px;
+}
+
+.block-6 .block-header-text {
+    max-width: 447px;
+}
+
+.block-6 .certificate-wrapper img {
+    max-width: 447px;
+    max-height: 476px;
+}
+
+.block-6 .block-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.block-6 .company-data {
+    display: flex;
+    gap: 50px;
+}
+
+.block-6 .tax-registarion {
+    max-width: 227px;
+    position: relative;
+}
+
+.block-6 .adress {
+    max-width: 174px;
+    position: relative;
+}
+
 @media screen and (max-width: 1680px) {
     body {
         width: 1280px;   
@@ -966,6 +1046,9 @@ header {
     }
     .block-5 .feedback-links {
         margin-left: -470px;
+    }
+    .block-6 .block-content {
+        margin-left: 60px;
     }
 }
 
@@ -1085,9 +1168,19 @@ header {
         width: 40px;
         height: 40px;
     }
+    .block-6 .certificate-wrapper {
+        padding-top: 360px;
+        background-position-y: center;
+    }
+    .block-6 .block-content {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 980px) {
+    .block {
+        padding: 25px 0;
+    }
     .circles {
         width: 500px;
         height: 500px;
@@ -1305,7 +1398,7 @@ header {
     }
     .block-2 {
         display: block;
-        padding-top: 65px;
+        padding-top: 100px;
     }
     .block-2 .block-content {
         position: relative;
@@ -1416,6 +1509,9 @@ header {
         left: 45%;
         background-size: contain;
     }
+    .block-5 {
+        padding: 50px 0;
+    }
     .block-5 .block-content {
         grid-template-columns: 1fr;
         margin-top: 0;
@@ -1481,6 +1577,40 @@ header {
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+    .block-6 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .block-6 .block-header, .block-6 .block-footer {
+        grid-column: unset;
+    }
+    .block-6 .block-content {
+        grid-column: unset;
+        grid-row: unset;
+        min-height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .block-6 .certificate-wrapper img {
+        max-width: 210px;
+        max-height: 224px;
+    }
+    .block-6 .certificate-wrapper {
+        background-position: inherit;
+        align-items: center;
+        background-position-y: inherit;
+        padding-top: 0;
+        height: 220px;
+        width: 300px;
+    }
+    .block-6 .circles {
+        bottom: 0;
+        left: 0;
+    }
+    .block-6 .block-title, .block-6 .btn-secondary {
+        margin-left: 0;
     }
 }
 
